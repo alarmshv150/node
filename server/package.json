@@ -1,0 +1,22 @@
+{
+  "name": "server_creating_with_http_module",
+  "version": "1.0.0",
+  "description": "guide of the server creation in node js with http module",
+  "main": "index.js",
+  "scripts": {
+    "dev":"nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "http",
+    "server",
+    "guide"
+  ],
+  "author": "alexey_a",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.16"
+  }
+}
+

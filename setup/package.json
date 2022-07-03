@@ -1,0 +1,58 @@
+{
+  "name": "setup",
+  "version": "1.0.0",
+  "description": "node project setup",
+  "main": "index.js",
+  "author": "Aleksey Armashov (Alma-soft) <alexey_a@alma-soft.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "rimraf ./dist && babel -d ./dist ./src -s && node dist/main.js",
+    "dev": "node dev.js",
+    "lint:js": "eslint ./src",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": "eslint "
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "airbnb-base",
+      "prettier"
+    ],
+    "env": {
+      "node": true
+    }
+  },
+  "pre-commit": "lint-staged",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-latest": "^6.24.1",
+    "rimraf": "^3.0.2",
+    "yarn": "^1.22.18"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "babel-register": "^6.26.0",
+    "eslint": "^8.12.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "lint-staged": "^12.3.7",
+    "pre-commit": "^1.2.2"
+  }
+}

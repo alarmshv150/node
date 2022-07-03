@@ -1,0 +1,22 @@
+{
+  "name": "telegraf_learning",
+  "version": "1.0.0",
+  "description": "learning dependency for loto",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "telegraf",
+    "learning",
+    "loto"
+  ],
+  "author": "alexey_a",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.16",
+    "telegraf": "^4.8.2"
+  }
+}
